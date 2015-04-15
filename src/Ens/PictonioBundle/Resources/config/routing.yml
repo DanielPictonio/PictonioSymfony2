@@ -1,0 +1,19 @@
+EnsPictonioBundle_category:
+    pattern:  /category/{slug}/{page}
+    defaults: { _controller: EnsPictonioBundle:Category:show, page: 1 }
+
+ens_pictonio_ens_job:
+    resource: "@EnsPictonioBundle/Resources/config/routing/job.yml"
+    prefix:   /ens_job
+
+ens_pictonio_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: EnsPictonioBundle:Default:index }
+
+EnsPictonioBundle_job:
+    resource: "@EnsPictonioBundle/Resources/config/routing/job.yml"
+    prefix: /job
+ 
+EnsPictonioBundle_homepage:
+    pattern:  /
+    defaults: { _controller: EnsPictonioBundle:Job:index }

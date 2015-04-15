@@ -1,0 +1,16 @@
+#    ens_pictonio.example:
+#        class: Ens\PictonioBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
+
+services:
+    ens.pictonio.admin.category:
+        class: Ens\PictonioBundle\Admin\CategoryAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: pictonio, label: Categories }
+        arguments: [null, Ens\PictonioBundle\Entity\Category, EnsPictonioBundle:CategoryAdmin]
+ 
+    ens.pictonio.admin.job:
+        class: Ens\PictonioBundle\Admin\JobAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: pictonio, label: Jobs }
+        arguments: [null, Ens\PictonioBundle\Entity\Job, EnsPictonioBundle:JobAdmin]
